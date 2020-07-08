@@ -15,6 +15,10 @@ import getpass
 
 #####################################################################################################
 
+Resault=True
+
+#####################################################################################################
+
 def new_message():
 	filename = 'new_message.wav'
 
@@ -35,6 +39,8 @@ def start_check(self):
 
 	if itog_message == now_message:
 		now_message=imap.select('INBOX')
+		print ("1")
+		return Resault
 	else:
 		new_message()
 
@@ -48,7 +54,7 @@ class Start_Programm_SOS(Screen):
 	def start_chk(self):
 		Clock.schedule_interval(start_check,2)
 	def stop_check(self):
-		
+		Resault=False
 	def exit(self):
 		App.get_running_app().stop()
 
