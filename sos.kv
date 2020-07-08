@@ -1,0 +1,46 @@
+<ScreenManager>:
+
+	id: screen_manager
+
+	Start_Programm_SOS:
+		id:		screen1
+		name:		"Start_Programm_SOS"
+		manager:	screen_manager
+
+<Start_Programm_SOS>:
+
+	BoxLayout:
+
+	Image:
+		source:		'sos.png'
+		pos_hint:	{"x":0.0, "top":1.2}
+
+	Button:
+		text:		"Start"
+		size_hint	:0.2, 0.1
+		pos_hint:	{"x":0.2, "top":0.3}
+		on_release:	root.start_chk()
+
+	Button:
+		text:		"Stop"
+		size_hint	:0.2, 0.1
+		pos_hint:	{"x":0.6, "top":0.3}
+		on_release:	root.stop_check()
+
+	Button:
+		text:		"Test-list"
+		size_hint	:0.6, 0.1
+		pos_hint:	{"x":0.2, "top":0.2}
+		on_release:	root.test_list()
+
+	Button:
+		text:		"Exit"
+		size_hint:	0.1,0.1
+		pos_hint:	{"x":.9, "top":1}
+		on_release:	root.exit()
+
+	Button:
+		text:		"Info"
+		size_hint:	0.1,0.1
+		pos_hint:	{"x":.0, "top":1}
+		on_release:	root.info()
